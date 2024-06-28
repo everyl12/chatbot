@@ -13,7 +13,7 @@ if "thread_id" not in st.session_state:
 
 st.set_page_config(page_title="GroupGPT", page_icon=":speech_balloon:")
 
-openai.api_key = "sk-proj-J07mzOIjmZOZw3XyqAlIT3BlbkFJALCZvtBAYzme4yuN8d0V"
+openai.api_key = st.secrets("OPENAI_API_KEY")
 
 if st.sidebar.button("Start Chat"):
     st.session_state.start_chat = True
